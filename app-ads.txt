@@ -1,0 +1,4 @@
+# AdMob yetkili satıcı listesi (https://iabtechlab.com/ads-txt/).
+# AdMob hesabı açılınca: AdMob › Uygulamalar › app-ads.txt'deki satırı kopyalayıp aşağıdaki
+# satırın başındaki "#"i kaldırarak pub-… kimliğini onunla değiştirin.
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

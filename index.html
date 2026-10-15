@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CAD Viewer – iPhone ve iPad için CAD görüntüleyici</title>
+<meta name="description" content="STEP, IGES, STL ve OBJ modellerini iPhone ve iPad'de tamamen cihazda açın, ölçün ve inceleyin.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f5f6f8; --surface: #ffffff; --text: #111317; --muted: #5b616d;
+    --line: rgba(0, 0, 0, 0.1); --accent: #0a84ff; --cyan: #0a7fb0; --green: #1f9d4a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0f12; --surface: #171a20; --text: #f2f3f5; --muted: rgba(235, 235, 245, 0.6);
+      --line: rgba(255, 255, 255, 0.1); --cyan: #64d2ff; --green: #30d158;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 56px; }
+  header { display: flex; align-items: center; gap: 14px; }
+  .logo { width: 56px; height: 56px; border-radius: 14px; background: var(--accent);
+          display: grid; place-items: center; flex: none; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0; }
+  h2 { font-size: 21px; margin: 40px 0 12px; }
+  h3 { font-size: 16px; margin: 0 0 4px; }
+  p { margin: 0 0 12px; }
+  .lead { font-size: 18px; color: var(--muted); margin: 20px 0 24px; }
+  .badge { display: inline-block; padding: 12px 18px; border-radius: 12px; background: var(--accent);
+           color: #fff; font-weight: 600; text-decoration: none; }
+  .badge[aria-disabled="true"] { opacity: 0.55; pointer-events: none; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+  .card p { color: var(--muted); font-size: 15px; margin: 0; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--cyan); }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+            padding: 12px 16px; margin-bottom: 8px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--muted); margin: 10px 0 2px; }
+  a { color: var(--accent); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="logo" aria-hidden="true">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"
+           stroke-linejoin="round"><path d="M12 2 21 7v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>
+    </div>
+    <h1>CAD Viewer</h1>
+  </header>
+
+  <p class="lead">STEP, IGES, STL ve OBJ modellerini iPhone ve iPad'de açın, ölçün ve inceleyin.
+    Her şey cihazda çalışır: dosyalarınız hiçbir sunucuya yüklenmez, internet gerekmez.</p>
+
+  <!-- App Store link goes here once the app is published. -->
+  <a class="badge" href="#" aria-disabled="true">App Store'da yakında</a>
+
+  <h2>Özellikler</h2>
+  <div class="grid">
+    <div class="card"><h3>Cihazda açılış</h3><p>STEP ve IGES dosyaları telefonda üçgen ağa çevrilir; dosyalar cihazdan çıkmaz.</p></div>
+    <div class="card"><h3>Ölç ve kesit al</h3><p>Noktadan noktaya mesafe, X/Y/Z kesit düzlemi ve dolgulu kesit yüzeyleri.</p></div>
+    <div class="card"><h3>Parçalar</h3><p>Montaj ağacında arama, gizleme, yalıtma, saydamlık ve renk.</p></div>
+    <div class="card"><h3>Kütle ve kontrol</h3><p>Malzemeye göre ağırlık ve hacim, sınır kutusu ve ağ hatası kontrolü.</p></div>
+  </div>
+
+  <h2>Fiyatlandırma</h2>
+  <div class="grid">
+    <div class="card"><h3>Ücretsiz</h3><p>STL, OBJ ve örnek model sınırsız. Yeni kullanıcıya <span class="mono">3</span> kredi.</p></div>
+    <div class="card"><h3>Krediler</h3><p>Her STEP/IGES açılışı <span class="mono">1</span> kredi; 10 dakika içinde yeniden açmak ücretsiz. Reklam izleyerek günde <span class="mono">3</span> kredi kazanılabilir.</p></div>
+    <div class="card"><h3>Pro</h3><p>Reklamsız kullanım ve her ay <span class="mono">40</span> kredi; aylık veya yıllık.</p></div>
+  </div>
+
+  <h2>Destek</h2>
+  <details>
+    <summary>Satın aldığım krediler görünmüyor</summary>
+    <p>Uygulamayı kapatıp yeniden açın; App Store'dan gelen bekleyen alımlar açılışta işlenir.
+      Sorun sürerse satın alma tarihini ve App Store makbuzunu bize gönderin.</p>
+  </details>
+  <details>
+    <summary>Aboneliğimi nasıl iptal ederim?</summary>
+    <p>iPhone'da Ayarlar › [adınız] › Abonelikler › CAD Viewer. İptal, mevcut dönemin sonunda
+      geçerli olur; o zamana kadar Pro kullanmaya devam edersiniz.</p>
+  </details>
+  <details>
+    <summary>Yeni telefona geçtim, Pro'm nerede?</summary>
+    <p>Uygulamada Hesap › Satın alımları geri yükle'ye dokunun. Abonelik geri gelir. Kredi
+      paketleri tek seferlik alımdır; iCloud eşitlemesi açıksa bakiyeniz aynı Apple Kimliği ile
+      yeni cihaza da gelir.</p>
+  </details>
+  <details>
+    <summary>Bir dosya açılmadı, kredim gitti mi?</summary>
+    <p>Hayır. Açılamayan dosyanın kredisi otomatik olarak iade edilir; Hesap ekranındaki işlem
+      geçmişinde "iade" olarak görünür.</p>
+  </details>
+  <details>
+    <summary>İade almak istiyorum</summary>
+    <p>Satın almalar Apple üzerinden yapılır; iadeyi
+      <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> adresinden isteyebilirsiniz.</p>
+  </details>
+
+  <h2>İletişim</h2>
+  <p>Soru, hata bildirimi ve öneriler için: <a href="mailto:crstudio.apps@gmail.com">crstudio.apps@gmail.com</a></p>
+
+  <footer>
+    <span>© 2026 CR Studio</span>
+    <a href="gizlilik.html">Gizlilik Politikası</a>
+    <a href="kosullar.html">Kullanım Koşulları</a>
+  </footer>
+</main>
+</body>
+</html>
